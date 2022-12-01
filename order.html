@@ -1,0 +1,160 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="www/style/style.css" />
+    <title>PizzasOnly</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="inner-wrapper">
+        <head>
+          <img
+            id="logo"
+            src="www/images/icon/pizzaonly-logo.png"
+            width="170"
+            height="150"
+            alt="pizzaonly logo"
+          />
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="quiz.html">Quiz</a></li>
+              <li><a href="order.html">Order</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+        </head>
+        <div id="banner">
+          <div>
+            <img
+              src="www/images/pexels-maksim-goncharenok-4348786.jpg"
+              width="280"
+              height="350"
+              alt="pizza1.jpg"
+            />
+          </div>
+          <div>
+            <img
+              src="www/images/pexels-nataliya-vaitkevich-5792322.jpg"
+              width="280"
+              height="350"
+              alt="pizza2.jpg"
+            />
+          </div>
+          <div>
+            <img
+              src="www/images/pexels-arthur-brognoli-3343620.jpg"
+              width="280"
+              height="350"
+              alt="pizza3.jpg"
+            />
+          </div>
+          <div>
+            <img
+              src="www/images/pexels-nataliya-vaitkevich-5792329.jpg"
+              width="280"
+              height="350"
+              alt="pizza4.jpg"
+            />
+          </div>
+        </div>
+        <main>
+          <section id="co1">
+            <fieldset>
+              <legend>Pizza Order Form</legend>
+              <p>
+                Simply enter the number if pizza you want to order to find out
+                the cost
+              </p>
+              <form
+                action="#"
+                method="post"
+                id="orderform"
+                onsubmit="checkQuatity();return false"
+              >
+                <p>
+                  <label>Enter number of pizzas wanted:</label>
+                  <input type="number" name="quatity" id="quantity" />
+                </p>
+                <div id="ordertotalpart">
+                  <p>
+                    <input
+                      value="Total Cost"
+                      type="submit"
+                      id="submitbtn"
+                      onclick="writeResults()"
+                    />
+                  </p>
+                </div>
+              </form>
+              <div id="message" style="background-color: lightgray"></div>
+            </fieldset>
+          </section>
+          <script>
+            function writeResults(pNum, tCost) {
+              if (pNum == 1) {
+                document.getElementById("message").innerHTML =
+                  pNum + " large pizza will cost $" + tCost;
+              } else {
+                document.getElementById("message").innerHTML =
+                  pNum + " large pizzas will cost $" + tCost;
+              }
+            }
+            function checkQuatity() {
+              var pizza1P = 6.45;
+              var pizza2P = 12;
+              var pizza3P = 14;
+              var num1P = 0,
+                num2P = 0,
+                num3P = 0;
+              var pizzaNum = parseInt(
+                document.getElementById("quantity").value
+              );
+              if (
+                isNaN(pizzaNum) ||
+                pizzaNum <= 0 ||
+                document.getElementById("quantity").value.includes(".")
+              ) {
+                document.getElementById("message").innerHTML =
+                  "Please enter a whole positive number only.";
+              } else {
+                if (pizzaNum % 3 == 1) {
+                  num1P = 1;
+                  num2P = 0;
+                  num3P = Math.floor(pizzaNum / 3);
+                } else if (pizzaNum % 3 == 2) {
+                  num1P = 0;
+                  num2P = 1;
+                  num3P = Math.floor(pizzaNum / 3);
+                } else {
+                  num1P = 0;
+                  num2P = 0;
+                  num3P = Math.floor(pizzaNum / 3);
+                }
+                console.log(pizzaNum, num3P, num2P, num1P);
+                var tCost = num3P * pizza3P + num2P * pizza2P + num1P * pizza1P;
+                writeResults(pizzaNum, tCost);
+              }
+            }
+          </script>
+          <section id="co2">
+            <img
+              src="www/images/horiz/pexels-cats-coming-365459.jpg"
+              width="400"
+              height="200"
+              alt="menu1.jpg"
+            />
+          </section>
+        </main>
+        <footer>
+          <p>&copy; CopyRight 2022 PizzasOnly</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

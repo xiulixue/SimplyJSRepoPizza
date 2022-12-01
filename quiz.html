@@ -1,0 +1,247 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="www/style/style.css" />
+    <title>PizzasOnly</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="inner-wrapper">
+        <head>
+          <img
+            id="logo"
+            src="www/images/icon/pizzaonly-logo.png"
+            width="170"
+            height="150"
+            alt="pizzaonly logo"
+          />
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="quiz.html">Quiz</a></li>
+              <li><a href="order.html">Order</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+        </head>
+        <div id="banner">
+          <div>
+            <img
+              src="www/images/pexels-maksim-goncharenok-4348786.jpg"
+              width="280"
+              height="350"
+              alt="pizza1.jpg"
+            />
+          </div>
+          <div>
+            <img
+              src="www/images/pexels-nataliya-vaitkevich-5792322.jpg"
+              width="280"
+              height="350"
+              alt="pizza2.jpg"
+            />
+          </div>
+          <div>
+            <img
+              src="www/images/pexels-arthur-brognoli-3343620.jpg"
+              width="280"
+              height="350"
+              alt="pizza3.jpg"
+            />
+          </div>
+          <div>
+            <img
+              src="www/images/pexels-nataliya-vaitkevich-5792329.jpg"
+              width="280"
+              height="350"
+              alt="pizza4.jpg"
+            />
+          </div>
+        </div>
+        <main>
+          <section id="quiz">
+            <h2>Quiz</h2>
+            <fieldset>
+              <legend>Complete Fun Promotional Quiz</legend>
+
+              <div class="quiz-design">
+                <div id="questionline1" class="questionline">
+                <label>What is the most popular pizza?</label>
+                <select
+                  id="sel-q1"
+                  class="fav-pizza"
+                  onchange="calculateScoreQ1()"
+                >
+                  <option selected disabled>Please Select</option>
+                  <option value="10">Classical Value Max Pizza</option>
+                  <option value="0">Wonderful BBQ Pizza</option>
+                  <option value="0">Wonderful Supreme Pizza</option>
+                  <option value="0">Super Meatlovers Pizza</option>
+                  <option value="0">Fire Breather Pizza</option>
+                  <option value="0">Garlic Chicken & Bacon Pizza</option>
+                  <option value="0">Garlic Prawn Pizza</option>
+                  <option value="0">Cheeseburger Pizza</option>
+                  <option value="0">Hamburger Pizza</option>
+                  <option value="0">Spicy Veg Pizza</option>
+                  <option value="0">Hawaiian Pizza</option>
+                  <option value="0">Simply Pizza</option>
+                </select>
+                <input class="in-score" type="number" id="q1" name="q1" disabled/>
+              </div>
+              <div id="questionline2" class="questionline">
+                <label>What is the second popular pizza?</label>
+                <select
+                  id="sel-q2"
+                  class="fav-pizza"
+                  onchange="calculateScoreQ2()"
+                >
+                  <option selected disabled>Please Select</option>
+                  <option value="0">Classical Value Max Pizza</option>
+                  <option value="10">Wonderful BBQ Pizza</option>
+                  <option value="0">Wonderful Supreme Pizza</option>
+                  <option value="0">Super Meatlovers Pizza</option>
+                  <option value="0">Fire Breather Pizza</option>
+                  <option value="0">Garlic Chicken & Bacon Pizza</option>
+                  <option value="0">Garlic Prawn Pizza</option>
+                  <option value="0">Cheeseburger Pizza</option>
+                  <option value="0">Hamburger Pizza</option>
+                  <option value="0">Spicy Veg Pizza</option>
+                  <option value="0">Hawaiian Pizza</option>
+                  <option value="0">Simply Pizza</option></select
+                ><input
+                  class="in-score"
+                  type="number"
+                  id="q2"
+                  name="q2"
+                  disabled
+                />
+              </div>
+              <div id="questionline3" class="questionline">
+                <label>What is the thid popular pizza?</label>
+                <select
+                  id="sel-q3"
+                  class="fav-pizza"
+                  onchange="calculateScoreQ3()"
+                >
+                  <option selected disabled>Please Select</option>
+                  <option value="0">Classical Value Max Pizza</option>
+                  <option value="0">Wonderful BBQ Pizza</option>
+                  <option value="10">Wonderful Supreme Pizza</option>
+                  <option value="0">Super Meatlovers Pizza</option>
+                  <option value="0">Fire Breather Pizza</option>
+                  <option value="0">Garlic Chicken & Bacon Pizza</option>
+                  <option value="0">Garlic Prawn Pizza</option>
+                  <option value="0">Cheeseburger Pizza</option>
+                  <option value="0">Hamburger Pizza</option>
+                  <option value="0">Spicy Veg Pizza</option>
+                  <option value="0">Hawaiian Pizza</option>
+                  <option value="0">Simply Pizza</option></select
+                ><input
+                  class="in-score"
+                  type="number"
+                  id="q3"
+                  name="q3"
+                  disabled
+                />
+              </div>
+              <div id="questionline4" class="questionline">
+                <label>What is your favorite pizza?</label>
+                <select
+                  id="sel-q4"
+                  class="fav-pizza"
+                  onchange="calculateScoreQ4()"
+                >
+                  <option selected disabled>Please Select</option>
+                  <option value="10">Classical Value Max Pizza</option>
+                  <option value="10">Wonderful BBQ Pizza</option>
+                  <option value="10">Wonderful Supreme Pizza</option>
+                  <option value="0">Super Meatlovers Pizza</option>
+                  <option value="0">Fire Breather Pizza</option>
+                  <option value="0">Garlic Chicken & Bacon Pizza</option>
+                  <option value="0">Garlic Prawn Pizza</option>
+                  <option value="0">Cheeseburger Pizza</option>
+                  <option value="0">Hamburger Pizza</option>
+                  <option value="0">Spicy Veg Pizza</option>
+                  <option value="0">Hawaiian Pizza</option>
+                  <option value="0">Simply Pizza</option>
+                </select>
+                <input class="in-score" type="number" id="q4" name="q4" disabled />
+              </div>
+              <div>
+
+                <div id="questionline5" class="questionline">
+                  <label>Total Score: </label>
+                  <input type="number" class="in-score"  id="score" name="score" disabled/>
+                  <label class="calc-label">Total Percent: </label>
+                  <input type="number" class="in-score" id="percent" name="score" disabled/>
+                <!-- </div>
+
+                <div id="questionline6" class="questionline"> -->
+                  <input
+                    type="submit"
+                    id="calc"
+                    name="calc"
+                    value="Submit Quiz"
+                    onclick="calculateTotalScore(),calculateTotalPerc()"
+                  />
+                </div>
+              </div>
+            </fieldset>
+          </section>
+
+          <script>
+            var mp, smp, tmp, myFav, scoreTotal, scorePerc;
+
+            //select the most populat pizza
+            function calculateScoreQ1() {
+              var select = document.getElementById("sel-q1");
+              var option = select.options[select.selectedIndex];
+              document.getElementById("q1").value = option.value;
+              mp = parseInt(option.value);
+            }
+            //select the second populat pizza
+            function calculateScoreQ2() {
+              var select = document.getElementById("sel-q2");
+              var option = select.options[select.selectedIndex];
+              document.getElementById("q2").value = option.value;
+              smp = parseInt(option.value);
+            }
+            //select the third populat pizza
+            function calculateScoreQ3() {
+              var select = document.getElementById("sel-q3");
+              var option = select.options[select.selectedIndex];
+              document.getElementById("q3").value = option.value;
+              tmp = parseInt(option.value);
+            }
+            //select the your favorite pizza
+            function calculateScoreQ4() {
+              var select = document.getElementById("sel-q4");
+              var option = select.options[select.selectedIndex];
+              document.getElementById("q4").value = option.value;
+              myFav = parseInt(option.value);
+            }
+
+            //calc the total score
+            function calculateTotalScore() {
+              scoreTotal = mp + smp + tmp + myFav;
+              document.getElementById("score").value = scoreTotal;
+            }
+            //calc the total percentage
+            function calculateTotalPerc() {
+              scorePerc = (scoreTotal / 40) * 100;
+              document.getElementById("percent").value = scorePerc;
+            }
+          </script>
+        </main>
+        <footer>
+          <p>&copy; CopyRight 2022 PizzasOnly</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
